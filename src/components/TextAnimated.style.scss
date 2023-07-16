@@ -1,0 +1,38 @@
+.banner {
+  position: relative;
+  margin: 2em auto;
+
+  .banner__text__animation1 {
+    rotate: 90deg;
+    position: absolute;
+    top: 33px;
+    left: -75px;
+    opacity: 0;
+    transition: ease all 1s;
+
+    &.active {
+      opacity: 1;
+      position: absolute;
+      rotate: 0deg;
+      top: -44px;
+      left: 0;
+    }
+    &.text {
+      position: relative;
+      top: 1em;
+    }
+  }
+
+  .banner__text__animation2 {
+    transform: scale(0);
+    position: relative;
+    opacity: 0;
+    transform-origin: left top;
+    transition: ease all 1s;
+
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

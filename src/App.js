@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import RandomsUniqueNums from "./components/RandomsUniqueNums";
+import RockPaperScissors from "./components/RockPaperScissors";
+import ThemeState from "./components/Tricky/context/Theme/ThemeState";
+import Tricky from "./components/Tricky";
+import TextAnimated from "./components/TextAnimated";
+import CardGlass from "./components/CardGlass/CardGlass";
+import BackgroundAnimated from "./components/BackgroundAnimated";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <BackgroundAnimated>
+        <RandomsUniqueNums />
+        <br />
+        <RockPaperScissors />
+        <br />
+        <TextAnimated />
+        <br />
+        <CardGlass />
+        <br />
+        <ThemeState>
+          <Tricky />
+        </ThemeState>
+      </BackgroundAnimated>
+    </main>
   );
-}
+};
 
 export default App;
